@@ -1,0 +1,32 @@
+<!--pages/home-music/index.wxml-->
+<!-- 搜索框 -->
+<van-search 
+  disabled 
+  shape="round" 
+  placeholder="请输入搜索关键词" 
+  background="#fafafa" 
+  bind:click-input="handleSearchClick" 
+/>
+
+<!-- 轮播图 -->
+<swiper 
+  class="swiper"
+  indicator-dots
+  autoplay
+  circular
+  interval="2500"
+  duration="1000"
+  style="height: {{ swiperHeight }}px"
+>
+  <block wx:for="{{ banners }}" wx:key="bannerId">
+    <swiper-item class="swiper-item">
+      <image 
+        src="{{ item.pic }}" 
+        class="swiper-image"
+        mode="widthFix"
+        bindload="handleSwiperImageLoaded"
+      >
+      </image>
+    </swiper-item>
+  </block>
+</swiper>
