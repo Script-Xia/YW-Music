@@ -1,0 +1,32 @@
+/* components/area-header/index.wxss */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 88rpx;
+}
+
+.header .title {
+  font-size: 36rpx;
+  font-weight: 700;
+}
+
+/* :empty: 伪元素，代表没有子元素的元素 */
+/* 当slot元素为空(没有设置插槽)时，显示默认元素 */
+.header .slot:empty + .default {
+  display: flex;
+}
+
+.header .default {
+  /* 默认不显示，当插槽为空时显示 */
+  display: none;
+  align-items: center;
+  font-size: 28rpx;
+  color: #777;
+}
+
+.header .default .icon {
+  width: 50rpx;
+  height: 50rpx;
+}
+

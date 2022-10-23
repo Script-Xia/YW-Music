@@ -30,3 +30,42 @@
     </swiper-item>
   </block>
 </swiper>
+
+<!-- 推荐歌曲 -->
+<view 
+  class="recommend-song"
+  wx:if="{{ recommendSongs.length > 0 }}"
+>
+  <area-header title="推荐歌曲"></area-header>
+  <block wx:for="{{ recommendSongs }}" wx:key="id">
+    <song-item-v1 item="{{ item }}"></song-item-v1>
+  </block>
+</view>
+
+<!-- 热门歌单 -->
+<song-menu-area 
+  songMenu="{{ hotSongMenu }}"
+  wx:if="{{ hotSongMenu.length > 0 }}"
+>
+</song-menu-area>
+
+<!-- 推荐歌单 -->
+<song-menu-area 
+  title="推荐歌单" 
+  songMenu="{{ recommendSongMenu }}"
+  wx:if="{{ recommendSongMenu.length > 0 }}"
+>
+</song-menu-area>
+
+<!-- 巅峰榜 -->
+<view class="summit-list" wx:if="{{ showSummitList }}">
+  <area-header
+    title="巅峰榜"
+    showRight="{{ false }}"
+  >
+  </area-header>
+  <block wx:for="{{ summitListData }}" wx:key="{{ item.name }}">
+    <summit-list-item item="{{ item }}"></summit-list-item>
+  </block>
+</view>
+

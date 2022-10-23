@@ -19,7 +19,7 @@
     </view>
   </view>
   <view class="related-video">
-    <text class="theme">推荐视频</text>
+    <area-header title="推荐视频" showRight="{{ false }}"></area-header>
     <block wx:for="{{ relatedVideos }}" wx:key="vid">
       <view class="related-video-content">
         <view class="related-video-image">

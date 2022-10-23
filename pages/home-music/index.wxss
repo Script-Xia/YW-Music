@@ -12,7 +12,11 @@ page {
 }
 
 /* 轮播图 */
-.swiper {}
+.swiper {
+  overflow: hidden;
+  transform: translateY(0);
+  border-radius: 10rpx;
+}
 
 .swiper-item {
   display: flex;
