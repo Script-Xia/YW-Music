@@ -64,7 +64,7 @@
     showRight="{{ false }}"
   >
   </area-header>
-  <block wx:for="{{ summitListData }}" wx:key="{{ item.name }}">
+  <block wx:for="{{ summitListData }}" wx:key="name">
     <summit-list-item item="{{ item }}"></summit-list-item>
   </block>
 </view>
